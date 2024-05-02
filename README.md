@@ -32,3 +32,4 @@ scrapy runspider ietf.py
 
 scrapy genspider wikipedia en.wikipedia.org
 
+scrapy runspider wikipedia.py -o article.csv:csv -s CLOSESPIDER_PAGECOUNT=10
