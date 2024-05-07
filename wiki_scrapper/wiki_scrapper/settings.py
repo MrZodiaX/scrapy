@@ -9,6 +9,12 @@
 
 BOT_NAME = "wiki_scrapper"
 
+
+#can be inserted here instead of giving them as argument in command 
+CLOSESPIDER_PAGECOUNT=10
+FEED_URI='article.json'
+FEED_FORMAT='json'
+
 SPIDER_MODULES = ["wiki_scrapper.spiders"]
 NEWSPIDER_MODULE = "wiki_scrapper.spiders"
 
