@@ -11,7 +11,7 @@ BOT_NAME = "wiki_scrapper"
 
 
 #can be inserted here instead of giving them as argument in command 
-CLOSESPIDER_PAGECOUNT=10
+CLOSESPIDER_PAGECOUNT=3
 FEED_URI='article.json'
 FEED_FORMAT='json'
 
@@ -68,9 +68,10 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    "wiki_scrapper.pipelines.WikiScrapperPipeline": 300,
-#}
+ITEM_PIPELINES = {
+   "wiki_scrapper.pipelines.CheckValue": 100,
+   "wiki_scrapper.pipelines.CleanDatePipeline": 200,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
